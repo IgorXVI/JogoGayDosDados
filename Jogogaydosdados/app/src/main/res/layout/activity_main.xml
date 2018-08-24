@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/pontosComputador"
+        android:layout_width="56dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginTop="16dp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:enabled="true"
+        android:inputType="text|number"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/pontosVoce"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_computador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_computador"
+        android:layout_width="83dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="368dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="17dp"
+        android:editable="false"
+        android:text="Computador:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_rolarDado"
+        app:layout_constraintEnd_toStartOf="@+id/pontosComputador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reiniciarJogo"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="34dp"
+        android:editable="false"
+        android:text="REINICIAR\nJOGO"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_finalizarTurno"
+        app:layout_constraintTop_toBottomOf="@+id/dado" />
+
+    <Button
+        android:id="@+id/btn_finalizarTurno"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="8dp"
+        android:editable="false"
+        android:text="FINALIZAR\nTURNO"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reiniciarJogo"
+        app:layout_constraintStart_toEndOf="@+id/btn_rolarDado"
+        app:layout_constraintTop_toBottomOf="@+id/dado"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/dado"
+        android:layout_width="136dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="72dp"
+        android:layout_marginTop="155dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reiniciarJogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/dice1" />
+
+    <Button
+        android:id="@+id/btn_rolarDado"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="34dp"
+        android:editable="false"
+        android:text="ROLAR\nDADO"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_finalizarTurno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_computador" />
+
+    <TextView
+        android:id="@+id/tv_voce"
+        android:layout_width="42dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="8dp"
+        android:editable="false"
+        android:text="Você:"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/dado"
+        app:layout_constraintEnd_toStartOf="@+id/pontosVoce" />
+
+    <TextView
+        android:id="@+id/pontosVoce"
+        android:layout_width="42dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="51dp"
+        android:ems="10"
+        android:enabled="true"
+        android:focusable="auto"
+        android:inputType="text|number"
+        android:text="0"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/dado"
+        app:layout_constraintEnd_toEndOf="@+id/pontosComputador"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pontosComputador"
+        app:layout_constraintTop_toBottomOf="@+id/pontosComputador" />
+</android.support.constraint.ConstraintLayout>
